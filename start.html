@@ -22,15 +22,27 @@
             border: 0 solid black;
         }
 
-        .larger:hover~h1 {
+        /* .larger:hover~h1 {
+            font-size: 160px;
+        } */
+
+        h1.duzy {
             font-size: 160px;
         }
 
-        .smaller:hover~h1 {
+        /* .smaller:hover~h1 {
+            font-size: 40px;
+        } */
+
+        h1.smaller {
             font-size: 40px;
         }
 
-        .border:hover~h1 {
+        /* .border:hover~h1 {
+            border: 20px solid black;
+        } */
+
+        h1.border {
             border: 20px solid black;
         }
     </style>
@@ -49,6 +61,20 @@
   src="https://code.jquery.com/jquery-3.6.1.min.js"
   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
   crossorigin="anonymous"></script>
+
+  <script>
+    $(".larger").click(function(){
+        $('h1').toggleClass("duzy");
+    })
+
+    $(".smaller").click(function(){
+        $('h1').toggleClass("smaller");
+    })
+
+    $(".border").click(function(){
+        $('h1').toggleClass("border");
+    })
+  </script>
 </body>
 
 </html>
